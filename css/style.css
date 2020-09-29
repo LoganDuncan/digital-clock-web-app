@@ -1,0 +1,100 @@
+/* style.css for digital clock */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+body {
+    background: black;
+    color: #ffffff;
+}
+
+button {
+    background: black;
+    color: white;
+    font-size: 2rem;
+    padding: 5px 15px 20px 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+button:hover {
+    background: #333333;
+}
+
+.bgButton, .colorButton {
+    margin-top: 15px;
+}
+
+.colorButton {
+    padding-top: 15px;
+}
+
+#onButton {
+    padding-top: 20px;
+}
+
+footer {
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: ". . one one one . ." "three three three three three three three" "four five six . seven eight nine";
+    grid-template-columns: 1fr 1fr 1fr 50px 1fr 1fr 1fr;
+    grid-template-rows: 112px 300px 112px;
+}
+
+.displayToggle {
+    display: none;
+}
+
+/* #region grid-areas */
+
+#onButton {
+    grid-area: one;
+}
+
+#clockDisplay {
+    grid-area: three;
+}
+
+#orangeButton {
+    grid-area: four;
+}
+
+#blueButton {
+    grid-area: five;
+}
+
+#greenButton {
+    grid-area: six;
+}
+
+#bgButton1 {
+    grid-area: seven;
+}
+
+#bgButton2 {
+    grid-area: eight;
+}
+
+#bgButton3 {
+    grid-area: nine;
+}
+
+/* #endregion */
+
+.clock {
+    font-family: 'Space Mono', monospace;
+    font-size: 8rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(202, 200, 200);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgb(77, 75, 75) 100%);
+    border: 5px solid #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+    color: rgb(0, 255, 60);
+    -webkit-box-reflect: below 100px -webkit-gradient(linear, right top, right bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+}
